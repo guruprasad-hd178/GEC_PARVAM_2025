@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>media</title>
+    <style>
+        .container {
+            width: 500px;
+            height: 500px;
+            border: 1px solid black;
+            /* padding: 20px; */
+            display: flex;
+            position: relative;
+            gap: 20px;
+        }
+
+        .c {
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+        }
+
+        .f1 {
+            background-color: antiquewhite;
+            animation-name: change_bg;
+            animation-duration: 4s;
+            /* animation-timing-function: ease-out; */
+            position: absolute;
+
+        }
+
+        @keyframes change_bg {
+
+            /* from{
+                background-color: aqua;
+            }
+            to{
+                background-color: blueviolet;
+            } */
+            0% {
+                background-color: black;
+                top: 0px;
+                left: 0px;
+            }
+
+            25% {
+                background-color: aqua;
+                top: 0px;
+                left: 300px;
+            }
+
+            50% {
+                background-color: aquamarine;
+                top: 300px;
+                left: 300px;
+            }
+
+            75% {
+                background-color: blue;
+                top: 300px;
+                left: 0;
+            }
+
+            100% {
+                background-color: blueviolet;
+                top: 0;
+                left: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="c f1">1</div>
+
+    </div>
+</body>
+
+</html>

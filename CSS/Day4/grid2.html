@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        .c {
+            width: 92vw;
+            height: 40vh;
+            border: 2px solid blueviolet;
+            /* grid-template-columns: auto auto auto; */
+            /* grid-template-rows: auto auto auto; */
+            display: grid;
+            column-gap: 10px;
+            row-gap: 10px;
+            padding: 10px;
+            grid-template-areas: "nav nav nav"
+                "main main aside"
+                "footer footer footer";
+        }
+
+        .c1 {
+            /* width: 160px; */
+            /* height: 120px; */
+            border: 2px solid red;
+
+        }
+
+        .c11 {
+            border: 2px solid red;
+            grid-area: "nav";
+            grid-column: span 3;
+        }
+
+        .c12 {
+            grid-area: "main";
+            grid-column: span 2;
+        }
+
+        .c13 {
+            grid-area: "aside";
+            grid-column: span 1;
+        }
+
+        .c14 {
+            grid-area: "footer";
+            grid-column: span 3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="c">
+
+        <div class="c1 c11">1</div>
+        <div class="c1 c12">2</div>
+        <div class="c1 c13">3</div>
+        <div class="c1 c14">4</div>
+        <!-- <div class="c1 c15">5</div>
+        <div class="c1 c16">6</div>
+        <div class="c1 c17">7</div>
+        <div class="c1 c18">8</div>
+        <div class="c1 c19">9</div> -->
+
+
+    </div>
+</body>
+
+</html>

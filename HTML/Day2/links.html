@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .index-link:link
+        {
+            color: red;
+            background-color: aqua;
+        }
+        .index-link:hover
+        {
+            color: blue;
+            background-color: aqua;
+        }
+        .index-link:visited
+        {
+            color: yellow;
+            background-color: red;
+        } 
+        .index-link:active
+        {
+            color: pink;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <!-- loads within te same tab -->
+    <a href="https://www.wikipedia.org/" target="_self" class="index-link">WIKIPEDIA IN SAME TAB</a>
+    <br></br>
+
+    <!-- loads in different same tab -->
+    <a href="https://www.wikipedia.org/" target="_blank" >WIKIPEDIA in DIFF TAB</a>
+    <br></br>
+
+    <a href="./index.html" class="index-link" target="_blank" title="directs to index.html">INDEX</a>
+    <p title="ptag will appear">ptag</p>
+
+
+</body>
+</html>

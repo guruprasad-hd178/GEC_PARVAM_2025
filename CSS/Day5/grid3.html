@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .gc{
+            width: 90vw;
+            height:50vh;
+            margin: 20px auto;
+            border: 2px solid black;
+            display: grid;
+            align-items: center;
+            /* grid-template-columns:1fr 1fr 1fr ; */
+            /* grid-template-columns: repeat(3, 1fr) ; */
+            /* grid-template-columns: auto auto auto; */
+            grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
+            justify-items: center;
+
+        }
+        .child {
+            border: 2px solid red;
+            background-color: aqua;
+            width: 40px;
+            height: 40px;
+        }
+        /* .f1{
+            justify-self: flex-start;
+        } */
+    </style>
+</head>
+<body>
+    <div class="gc">
+        <div class="child f1">1</div>
+        <div class="child">2</div>
+        <div class="child">3</div>
+        <div class="child">4</div>
+        <div class="child">5</div>
+        <div class="child">6</div>
+    </div>
+</body>
+</html>

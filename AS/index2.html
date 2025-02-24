@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Open Positions</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+
+    /* ===== Open Positions Styles ===== */
+    .open-positions {
+      text-align: center;
+      font-family: sans-serif;
+      margin: 40px 0;
+    }
+
+    .open-positions h2 {
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+
+    .positions-container {
+      /* A flex container to hold the cards in rows */
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: center;
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .position-card {
+      background-color: #f8f9fc;
+      border-radius: 8px;
+      width: 200px;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
+    }
+
+    /* A small hover effect */
+    .position-card:hover {
+      transform: translateY(5px);
+    } 
+
+    .position-card .icon {
+      font-size: 24px;
+      margin-bottom: 10px;
+      /* background-color: bisque; */
+    }
+
+    .position-card h3 {
+      margin: 0 0 10px;
+      font-size: 18px;
+      color: #333;
+    }
+
+    .position-card p {
+      margin: 0;
+      color: #555;
+    }
+    p{
+      border: 1px solid black;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <section class="open-positions">
+    <h2>Open Positions</h2>
+    <div class="positions-container">
+
+      <!-- Card 1 -->
+      <div class="position-card">
+        <div class="icon"><i class="fa-solid fa-pencil"></i></div>
+        <h3>Design</h3>
+        <p>4 open positions</p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="position-card">
+        <div class="icon"><i class="fa-solid fa-computer"></i></div>
+        <h3>Engineering</h3>
+        <p>8 open positions</p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="position-card">
+        <div class="icon"><i class="fa-solid fa-gear"></i></div>
+        <h3>Operations</h3>
+        <p>2 open positions</p>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="position-card">
+        <div class="icon"><i class="fa-solid fa-people-group"></i></div>
+        <h3>People</h3>
+        <p>6 open positions</p>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="position-card">
+        <div class="icon"><i class="fa-solid fa-bag-shopping"></i></div>
+        <h3>Sales</h3>
+        <p>7 open positions</p>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="position-card">
+        <div class="icon"><i class="fa-solid fa-building-columns"></i></div>
+        <h3>University</h3>
+        <p>5 open positions</p>
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>

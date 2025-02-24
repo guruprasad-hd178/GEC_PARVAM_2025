@@ -1,0 +1,17 @@
+
+
+ ele selector                   h1,p{} tag etc
+
+ id selector (unique)            #id{}  <p id="p1">   #p1{}  
+
+ class                           .class{}   <p class="ptag">   .ptag{}      
+
+ group selector                    p, div, h1 {}
+
+ universal selector             *{all}  
+
+ attribute selector               input[type = "text"] {}         <input type="text">
+
+ inline
+ internal 
+ external

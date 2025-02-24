@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex css</title>
+    <style>
+        * {
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+
+        body {
+            padding: 30px;
+        }
+
+        .d-flex {
+            width: 90vw;
+            height: 25vh;
+            border: 2px solid black;
+            display: flex;
+            align-items: center;
+            align-content: center;
+            text-align: center;
+            justify-content: space-between;
+            flex-direction: column-reverse;
+        }
+
+        .c1 {
+            width: 100px;
+            height: 20px;
+            border: 2px solid blue;
+            align-content: center;
+        }
+
+        /* .c11 {
+            flex-grow: 1;
+            align-self: flex-end;
+        }
+
+        .c12 {
+            flex-shrink: 2;
+            align-self: ;
+        }
+
+        .c15 {
+            flex-shrink: 2;
+            align-self: flex-start;
+        } */
+    </style>
+</head>
+
+<body>
+    <!-- <h1>Hello flex</h1> -->
+    <div class="d-flex">
+
+        <div class="c1 c11">1</div>
+        <div class="c1 c12">2</div>
+        <div class="c1 c13">3</div>
+        <div class="c1 c14">4</div>
+        <div class="c1 c15">5</div>
+
+        <!-- <div class="c1 1">6</div>
+            <div class="c1 2">7</div>
+            <div class="c1 3">8</div>
+            <div class="c1 4">9</div>
+            <div class="c1 5">10</div>
+
+            <div class="c1 1">1</div>
+            <div class="c1 2">2</div>
+            <div class="c1 3">3</div>
+            <div class="c1 4">4</div>
+            <div class="c1 5">5</div>
+       
+            <div class="c1 1">6</div>
+            <div class="c1 2">7</div>
+            <div class="c1 3">8</div>
+            <div class="c1 4">9</div>
+            <div class="c1 5">10</div> -->
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variable</title>
+    <style>
+        :root {
+            --aqua: aqua;
+            --green: green;
+        }
+
+        .p1 {
+            background-color: var(--aqua);
+        }
+
+        .d1 {
+            background-color: var(--green);
+        }
+
+        .p2 {
+            background-color: aqua;
+        }
+
+        .d2 {
+            --green: red;
+            background-color: var(--green);
+        }
+
+        .c {
+            margin: 20px;
+            border: 2px solid black;
+            width: 50vw;
+            height: 30vh;
+        }
+
+        .c1 {
+            width: 60%;
+            height: 20%;
+            border: 2px solid blue;
+            position: relative;
+        }
+
+        .c11 {
+            background-color: aqua;
+            z-index: 2;
+        }
+
+        .c12 {
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+
+<body>
+    <p class="p1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit hic iure, cumque aspernatur
+        ducimus magnam dolore quam iste veritatis accusantium cum minima. Dignissimos iste atque omnis iure. Inventore,
+        labore distinctio.</p>
+    <div class="d1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam laboriosam dolores, quaerat modi
+        possimus consequuntur tempore voluptas nihil ipsum aperiam dolorem necessitatibus! Quae corporis reiciendis
+        tenetur consequuntur, excepturi cum est?</div>
+
+    <p class="p2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit hic iure, cumque aspernatur
+        ducimus magnam dolore quam iste veritatis accusantium cum minima. Dignissimos iste atque omnis iure. Inventore,
+        labore distinctio.</p>
+    <div class="d2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam laboriosam dolores, quaerat modi
+        possimus consequuntur tempore voluptas nihil ipsum aperiam dolorem necessitatibus! Quae corporis reiciendis
+        tenetur consequuntur, excepturi cum est?</div>
+
+    <div class="c">
+        <div class="c1 c11">1</div>
+        <div class="c1 c12">2</div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Position in css </title>
+    <style>
+        body {
+            width: 1000px;
+            height: 1000px;
+        }
+
+        .c {
+            margin: 90px;
+            height: 350px;
+            width: 400px;
+            /* position: absolute; */
+            position: relative;
+            border: 2px solid salmon;
+        }
+
+        .div {
+            width: 30vw;
+            height: 50px;
+            border: 2px solid black;
+        }
+
+        .d1 {
+            background-color: antiquewhite;
+            /* position: absolute; */
+            position: fixed;
+            /* top: 120px; */
+            /* bottom: 10px; */
+            /* left: 100px; */
+            /* right: 100px; */
+            z-index: 2;
+        }
+
+        .d2 {
+            background-color: beige;
+            /* position: absolute; */
+            position: sticky;
+            top: 60px;
+            left: 70px;
+            z-index: 0;
+        }
+
+        .d3 {
+            background-color: wheat;
+            position: absolute;
+            left: 140px;
+            top: 120px;
+        }
+
+        .d4 {
+            background-color: blanchedalmond;
+            position: absolute;
+            top: 180px;
+            left: 210px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="c">
+        <div class="div d1">1</div>
+        <div class="div d2">2</div>
+        <div class="div d3">3</div>
+        <div class="div d4">4</div>
+    </div>
+</body>
+
+</html>

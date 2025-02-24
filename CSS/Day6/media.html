@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enri media</title>
+    <style>
+        .c {
+            width: 100vw;
+            height: 100vh;
+            border: 1px solid black;
+            background-color: aqua;
+        }
+
+        /* @media only screen and (min-width:600px) and (max-width:1200px) {
+            .c {
+                background-color: blueviolet;
+                color: aliceblue;
+            }
+        } */
+        /* @media only print and (min-width:600px) and (max-width:1200px) {
+            .c {
+                background-color: blueviolet;
+                color: aliceblue;
+            }
+        } */
+        @media not screen and (min-width:600px) and (max-width:1200px){
+            .c {
+                background-color: blueviolet;
+                color: aliceblue;
+            }
+        }
+        /* @media not print and (max-width:600px) {
+            .c {
+                background-color: blueviolet;
+                color: aliceblue;
+            }
+        } */
+
+
+    </style>
+</head>
+
+<body>
+    <div class="c">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit recusandae repellendus aliquid sapiente tempore
+        delectus provident tempora quisquam. Voluptates aliquid recusandae id ad perspiciatis dignissimos accusantium
+        suscipit distinctio asperiores vero.
+    </div>
+</body>
+
+</html>

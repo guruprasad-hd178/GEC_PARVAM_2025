@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table css2</title>
+    <style>
+        table,td,tr,th{
+            border-collapse: collapse ;
+            /* border: 1px solid wheat; */
+            text-align: center;
+            text-transform: capitalize;
+        }
+        tr:nth-child(2n){
+            background-color:antiquewhite;
+        }
+        tr:nth-child(2n+1){
+            background-color: whitesmoke;
+        }
+        tr:first-child{
+            background-color:  wheat;
+        }
+        th{
+            padding: 10px;
+        }
+        .t{
+            width: 50vw;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <table class="t">
+        <tr>
+            <th>Name</th>
+            <th>Rollno</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>sda</td>
+            <td>4235</td>
+            <td>45</td>
+        </tr>
+        <tr>
+            <td>dsaf2</td>
+            <td>324</td>
+            <td>34</td>
+        </tr>
+        <tr>
+            <td>dsaf2</td>
+            <td>324</td>
+            <td>34</td>
+        </tr>
+        <tr>
+            <td>dsaf2</td>
+            <td>324</td>
+            <td>34</td>
+        </tr>
+    </table>
+</body>
+
+</html>

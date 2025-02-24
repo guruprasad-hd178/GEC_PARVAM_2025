@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .c {
+            width: 40vw;
+            height: 40vh;
+            background-color: antiquewhite;
+            margin: 20px;
+            padding: 20px;
+            border: 2px solid wheat;
+            box-sizing: border-box;
+            border-radius: 10px;
+        }
+
+        h2 {
+            text-align: center;
+            margin: 20px;
+        }
+
+        .in {
+            width: 100%;
+            position: relative;
+        }
+
+        .in input {
+            width: 100%;
+            outline: none;
+            padding: 5px;
+            font-size: smaller;
+            border-radius: 5px;
+        }
+
+        .i1 {
+            position: absolute;
+            top: 10px;
+        }
+
+        .i2 {
+            position: absolute;
+            top: 10px;
+        }
+
+        #submit {
+            font-size: 20px;
+            font-family: ar;
+            border-radius: 5px;
+            background-color: aliceblue;
+            transition: background-color 1s, border 1s;
+        }
+
+        #submit:hover {
+            background-color: aqua;
+            border: 2px solid blue;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="c">
+        <form action="" method="post">
+            <h2>LOGIN FORM </h2>
+            <div class="in">
+                <input type="text" name="name" id="name" placeholder="Enter name">
+                <i class="fa-solid fa-pencil" id="i1"></i><br><br>
+
+                <input type="email" name="email" id="email" placeholder="Enter email">
+                <i class="fa-solid fa-envelope" id="i2"></i>
+            </div>
+
+            <br><br><input type="submit" value="SUBMIT" id="submit">
+            lo
+        </form>
+    </div>
+</body>
+
+</html>

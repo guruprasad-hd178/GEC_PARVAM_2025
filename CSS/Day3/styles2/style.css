@@ -1,0 +1,7 @@
+.p {
+    outline: 2px solid block;
+    text-align: center;
+    text-decoration: underline;
+    text-transform: capitalize;
+    text-decoration: overline;
+}

@@ -1,0 +1,69 @@
+/* h1 {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#h21 {
+    text-align: center;
+}
+
+.pa {
+    color: blue;
+}
+
+h1,
+h2 {
+    background-color: aqua;
+}
+
+* {
+    /* background-color: aquamarine; */
+/* background: none;
+}
+
+input[id="i1"] {
+    background-color: #fff;
+} */
+
+
+
+
+
+/* background */
+
+
+/* p{
+    background-image: url(../images/photo.png);
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-size: contain;
+    opacity: 0.4;
+
+
+}
+  */
+
+
+/* b o r d e r  */
+
+
+
+.p31 {
+    border: 2px solid black;
+    background-color: yellow !important;
+    border-radius: 5px 10px 15px 20px ;
+}
+
+.p32 {
+    background-color: green ;
+}
+
+.p33 {
+    background-color: aqua ;
+}
+
+p {
+    background-color: red !important;
+    border-radius: 5px;
+}

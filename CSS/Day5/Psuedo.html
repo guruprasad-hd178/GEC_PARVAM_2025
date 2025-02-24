@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo elements</title>
+    <style>
+        .ct::selection {
+            color: red;
+            background-color: yellow;
+        }
+
+        .ct {
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        .ct:hover {
+            color: red;
+        }
+
+        .ct::after {
+            content: "h";
+        }
+
+        .ct::before {
+            content: "i";
+        }
+
+        .fir::first-letter {
+            font-size: 40px;
+        }
+
+        .sec::first-line {
+            color: blueviolet;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="c">
+        <div class="n">
+            <a href="" class="ct">Home </a>
+            <a href="" class="ct">About</a>
+            <a href="" class="ct">Contact</a>
+        </div>
+
+        <p class="fir">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse adipisci doloremque optio delectus
+            ipsum perspiciatis eligendi tempore. Ullam consectetur repudiandae soluta perferendis, esse sint voluptate
+            dolor, harum commodi sapiente explicabo.</p>
+
+        <p class="sec">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium, hic excepturi reprehenderit
+            natus inventore voluptatem laborum odio est tempore. Quidem, nemo nobis. Porro eum sunt ab, minima
+            repellendus delectus accusantium.</p>
+    </div>
+</body>
+
+</html>
