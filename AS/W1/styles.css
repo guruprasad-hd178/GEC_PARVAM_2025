@@ -1,13 +1,23 @@
 body{
     margin: 0;
     padding: 0;
+    width:100vw;
 }
 
 .headdiv{
     display: flex;
+    justify-content: space-between;
 }
 
-.d1{
+.a{
+    text-decoration: none;
+}
+
+.login{
+    /* padding: 10px; */
     display: flex;
-    justify-content: end;
+    /* gap: 8vw; */
+    /* justify-content: end; */
+    /* align-items: flex-end; */
+    /* align-content: flex-end; */
 }
