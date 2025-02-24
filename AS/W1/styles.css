@@ -1,24 +1,13 @@
-
 body{
-    background-color: rgb(254, 252, 249);
+    margin: 0;
+    padding: 0;
 }
+
 .headdiv{
     display: flex;
-    gap: 30vw;
-    color: aliceblue;
-    background-color: rgb(5, 5, 103);
-    
 }
 
-.hd {
+.d1{
     display: flex;
-}
-
-.nav {
-    text-decoration: none;
-    justify-self: center;
-}
-
-.a1 {
-    text-decoration: none;
+    justify-content: end;
 }
