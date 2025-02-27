@@ -1,10 +1,10 @@
-body{
+body {
     margin: 0;
     padding: 0;
-    width:100vw;
+    width: 100vw;
 }
 
-.headdiv{
+.headdiv {
     padding: 0px 100px 0px 30px;
     display: flex;
     justify-content: space-between;
@@ -12,27 +12,35 @@ body{
     color: aliceblue;
 }
 
-a{
+a {
     text-decoration: none;
 }
+h1{
+    font-size: 50px;
+    color: rgb(236, 241, 97);
+}
 
-.hd{
+.hd {
     display: flex;
     padding: 10px 70px;
     align-items: center;
-    gap:60vw;
+    gap: 50vw;
     /* justify-self:  flex-end; */
-    
+
 }
 
-.nav{
+.nav {
     /* gap:300px; */
     align-items: center;
     justify-self: flex-end;
     justify-content: space-around;
 }
+nav{
+    display: flex;
+    gap: 30px;
+}
 
-.img1{
+.img1 {
     background-image: url("./images/2.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -42,47 +50,51 @@ a{
     color: aliceblue;
 }
 
-.b1{
+.b1 {
     /* opacity: 0.5; */
     background: none;
     padding: 10px;
     color: aliceblue;
     border: 2px solid white;
 }
-.but2{
+
+.but2 {
     background: none;
     padding: 10px 20px;
     color: black;
     border: 2px solid black;
 }
 
-.imgleft{
+.imgleft {
     /* margin: 100px 10px 70px 150px; */
     margin-right: 40px;
     width: 400px;
     height: 250px;
 }
-.div2{
+
+.div2 {
     display: flex;
     margin: 120px 10px 100px 0px;
     padding: 10px 200px;
     justify-content: space-between;
 }
 
-.h21{
+.h21 {
     align-self: center;
 }
-.Department{
+
+.Department {
     background-color: rgb(237, 235, 232);
     display: grid;
     grid-template-columns: repeat(3, auto);
 }
 
-.h22{
+.h22 {
     padding: 100px auto;
     /* align-self: center; */
 }
-.dp1{
+
+.dp1 {
     /* align-items: center; */
     padding: 50px;
     display: flex;
@@ -91,32 +103,42 @@ a{
     justify-content: space-between;
     background-color: rgb(237, 235, 232);
 }
-.divc1{
+
+.divc1 {
     width: 270px;
     height: 250px;
     padding: 10px;
     margin: 100px;
     background-color: aliceblue;
-    /* display: flexbox; */
+    display: grid;
+    grid-template-columns: auto;
 }
 
 
 
-footer{
+footer {
     color: aliceblue;
-    background-color:rgb(4, 15, 106) ;
+    background-color: rgb(4, 15, 106);
 }
-.fdiv1{
+
+.fdiv1 {
     width: 70%;
     padding: 10px 50px;
 }
-.fdiv2{
+
+.fdiv2 {
     padding: auto;
     width: 30%;
 }
-.fdiv3{
-    padding: 10px 30px ;
+
+.fdiv3 {
+    padding: 10px 30px;
 }
-.foo{
+
+.foo {
     display: flex;
+}
+
+.fp1 {
+    font-size: 32px;
 }
