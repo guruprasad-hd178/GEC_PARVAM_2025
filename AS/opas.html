@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Operators Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            margin: 10px 0;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<h1>JavaScript Operators Demo</h1>
+
+<p id="arithmetic"></p>
+<p id="assignment"></p>
+<p id="comparison"></p>
+<p id="bitwise"></p>
+<p id="logical"></p>
+<p id="ternary"></p>
+
+<script>
+    // Arithmetic Operators
+    let a = 10, b = 5;
+    document.getElementById("arithmetic").innerText = `Arithmetic: + ${a + b}, - ${a - b}, * ${a * b}, / ${a / b}, % ${a % b}, ** ${a ** b}`;
+
+    // Assignment Operators
+    let x = 10;
+    x += 5;  // x = x + 5
+    x -= 2;  // x = x - 2
+    x *= 2;  // x = x * 2
+    x /= 2;  // x = x / 2
+    document.getElementById("assignment").innerText = `Assignment: += ${x}, -= ${x}, *= ${x}, /= ${x}`;
+
+    // Comparison Operators
+    let comparison = (a == b) + " " + (a === b) + " " + (a != b) + " " + (a !== b) + " " + (a > b) + " " + (a >= b);
+    document.getElementById("comparison").innerText = `Comparison: ${comparison}`;
+
+    // Bitwise Operators
+    let bitwise = (a & b) + " " + (a | b) + " " + (~a) + " " + (a ^ b);
+    document.getElementById("bitwise").innerText = `Bitwise: & ${a & b}, | ${a | b}, ~ ${~a}, ^ ${a ^ b}`;
+
+    // Logical Operators
+    let logical = (a > b && b > 0) + " " + (a > b || b < 0) + " " + !(a < b);
+    document.getElementById("logical").innerText = `Logical: && ${a > b && b > 0}, || ${a > b || b < 0}, ! ${!(a < b)}`;
+
+    // Ternary Operator
+    let ternary = a > b ? "A is greater" : "B is greater";
+    document.getElementById("ternary").innerText = `Ternary: ${ternary}`;
+</script>
+</body>
+</html>
