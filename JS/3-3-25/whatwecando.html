@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>1 we can change html content</h3>
+    <p id="demo"></p>
+    <button onclick="document.getElementById('demo').innerText='js will change html content'">click</button>
+
+
+    <h3>2 we can change the attribute</h3>
+    <img src="./off.jpeg" alt="image" width="100px" height="100px" id="bulb_img">
+
+    <button onclick="document.getElementById('bulb_img').src='./on.jpeg'">on</button>
+    <button onclick="document.getElementById('bulb_img').src='./off.jpeg'">off</button>
+
+    <p id="demo2">lorem</p>
+    <button onclick="document.getElementById('demo2').style.background='red'">click</button>
+
+    <h3>3 we can hide the html code</h3>
+    <p id="demo3">llooom moou</p>
+    <button onclick="document.getElementById('demo3').style.display='none'">click</button>
+
+    <h3>4 we can show the html code</h3>
+    <p id="demo4" style="display: none;">llooom moou</p>
+    <button onclick="document.getElementById('demo4').style.display='block'">click</button>
+</body>
+
+</html>
