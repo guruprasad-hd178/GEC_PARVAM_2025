@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ref pre</title>
+</head>
+
+<body>
+
+    <script>
+        let x = 10;
+        let y = x;
+
+        console.log("value x before", x); //10
+        console.log("value y before", y); //10
+
+        x = 100;
+
+        console.log("value x after", x); //100
+        console.log("value y after", y); //10
+
+        let arr1 = [12, 13, 14, 15];
+        let arr2 = arr1;
+
+        console.log("value arr1 before", arr1); //10
+        console.log("value arr2 before", arr2); //10
+
+        arr1.push(24);
+
+        console.log("value arr1 after", arr1); //100
+        console.log("value arr2 after", arr2); //10
+
+
+
+    </script>
+</body>
+
+</html>

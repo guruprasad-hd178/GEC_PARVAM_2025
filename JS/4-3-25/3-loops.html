@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loops</title>
+</head>
+
+<body>
+
+    <h1>loops</h1>
+    <p>1 for <pre> for (in ; con; inc){
+        code
+    }</pre></p>
+    <p>2 while
+    <pre>
+        while (con)
+        {
+            <!-- code -->
+            <!-- inc / dec -->
+        }
+    </pre>
+    </p>
+    <p>3 do while
+    <pre>
+        do{
+            code 
+            inc / dec
+        }while(con)
+    </pre>
+    </p>
+    <p>4 for in</p>
+    <p>5 for of
+    <pre>
+        for( let item of iterable ){
+            code
+        }
+    </pre>
+    </p>
+
+    <script>
+        // let arr1 = ["item1", "item2", "item3", "item4"];
+        // let len = arr1.length;
+        // console.log(len);
+
+        // for
+        // for (let i = 0; i < len; i++) {
+        //     console.log(arr1[i]);
+        // }
+
+        // while
+        // let len = + prompt("enter number");
+        // let i = 0;
+        //  while (i <= len) { 
+        //      console.log(i);
+        //      i++;
+        //  }
+
+
+        // do while
+
+        // let len = + prompt("enter number");
+        // let i = 0;
+        // do {
+        //     console.log(i);
+        //     i++;
+        // } while (i <= len)
+
+
+        // do {
+        //     const input = +prompt("enter number");
+        //     if (input === 10) {
+        //         break;
+        //     }
+        // } while (true)
+
+
+
+        // for of
+        let arr = [1, 2, 3, 4, 5];
+
+        for (let item in arr) {
+            console.log(item + " - " +arr[item]);
+        }
+
+
+
+    </script>
+</body>
+
+</html>

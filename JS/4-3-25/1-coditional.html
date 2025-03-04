@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>conditionals</title>
+</head>
+
+<body>
+    <h1>conditional statements</h1>
+    <p>1 if</p>
+    <p>2 if else</p>
+    <p>3 if else ladder</p>
+    <p>4 switch</p>
+
+
+    <script>
+        let age = 8;
+
+        // if else
+            if (age >= 18) {
+                console.log("eligible");
+            }
+            else {
+                console.log("Not ")
+            }
+
+        if (age > 0 && age < 10) {
+            console.log("less than 10");
+
+        }
+        else if (age > 20) {
+            console.log("greater than 20");
+        }
+        else if (age > 30) {
+            console.log("greater than 30");
+        }
+        else {
+            console.log("none")
+        }
+
+
+
+        if (age >= 0 && age <= 12) {
+            console.log("child");
+
+        }
+        else if (age >= 13 && age <= 19) {
+            console.log("teenager");
+        }
+        else if (age >= 20 && age <= 59) {
+            console.log("adult");
+        }
+        else if (age >= 60 && age <= 100) {
+            console.log("old")
+        }
+        else {
+            console.log("invalid")
+        }
+
+        // switch
+         switch (condition) {
+            case 1:
+                {
+                    statement
+                }
+            default:
+                {
+
+                }
+        }
+
+
+        let num = 9;
+        switch (num) {
+            case 1: console.log("1");
+                break;
+
+            case 2: console.log("2");
+                break;
+
+            case 3: console.log("3");
+                break;
+
+            default: console.log(">3");
+                break;
+        }
+
+
+
+        let day = 1;
+
+        switch (day) {
+            case 1: console.log("Sunday");
+                break;
+
+            case 2: console.log("Monday");
+                break;
+
+            case 3: console.log("Tuesday");
+                break;
+
+            case 4: console.log("Wednesday");
+                break;
+
+            case 5: console.log("Thursday");
+                break;
+
+            case 6: console.log("Friday");
+                break;
+
+            case 7: console.log("Saturday");
+                break;
+
+            default: console.log("Provide correct details");
+                break;
+        }
+    </script>
+</body>
+
+</html>
