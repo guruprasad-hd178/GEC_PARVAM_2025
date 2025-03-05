@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>functions</title>
+</head>
+
+<body>
+    <h1>FUNCTIONS</h1>
+
+    <p>1 function declaration</p>
+    <p>2 function expression</p>
+    <p>3 arrow function</p>
+
+    <pre>
+        1
+        function function_name () {
+            //code
+        }
+   
+        call a function
+        function_name();
+    </pre>
+    <pre>
+        2
+        const function_name = function (parameter) {
+            //code
+        } 
+
+        call
+        function_name (arg); 
+    </pre>
+    <pre>
+        3
+        const function_name = {parameters} => {
+            // code
+        }
+    </pre>
+
+
+    <h2>types of function </h2>
+    <p>1 function accepting a parameter and not returning a value</p>
+    <p>2 function accepting a parameter and returning a value</p>
+    <p>3 function not accepting a parameter and not returning a value</p>
+    <p>4 function not accepting a parameter and returning a value</p>
+
+
+
+
+    <script>
+
+
+        // 1
+        function apara_nret(number) {
+            console.log(`function accepting a parameter and not returning a value , ${number}`);
+
+        }
+        apara_nret('sad');
+
+
+        // 2
+        function apara_ret(number) {
+            return number * 2;
+        }
+        const res = apara_ret(335);
+        console.log(`the result is ${res}`);
+
+
+        // 3
+        function npara_nret() {
+            console.log(`function not accepting a parameter and not returning a value`);
+        }
+        npara_nret();
+
+
+        // 4
+        function npara_ret() {
+            return true;
+        }
+        const r = npara_ret();
+        console.log(`returning ${r}`);
+
+
+        function even_odd(n) {
+            if (n % 2 === 0)
+                console.log("even");
+            else
+                console.log("odd");
+        }
+        even_odd(9);
+
+        function odd_even(n) {
+            if (n % 2 === 0)
+                return 'even';
+            else
+                return 'odd';
+        }
+        // const t = odd_even( + prompt("enter number") );
+        // console.log(`${t} number`);
+
+
+
+        // 2 function expression
+        const display1 = function () {
+            console.log("this is a display function")
+        }
+
+        // function call
+        display1();
+
+
+        // 3 arrow function
+        const display2 = () => {
+            console.log("this is a arrow function")
+        }
+
+        // function call
+        display2();
+
+
+
+    </script>
+</body>
+
+</html>

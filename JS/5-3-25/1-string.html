@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>String in JS</h1>
+
+    <p>Methods in strings</p>
+    <p>1 length</p>
+    <p>2 slice </p>
+    <p>3 substring</p>
+    <p>4 substr</p>
+    <p>5 replace</p>
+    <p>6 toUpperCase</p>
+    <p>7 toLowerCase</p>
+    <p>8 trim</p>
+    <p>9 indexOf</p>
+    <p>10 startswith</p>
+    <p>11 endswith</p>
+    <p>12 includes</p>
+    <p>13 join</p>
+
+    <script>
+
+        // 1 length
+        let str1 = "hello world";
+        // console.log(str1);
+        const len = str1.length;
+        console.log(`the length of string ${str1} is ${len}`);
+        console.log("the length of string " + str1 + " is " + len);
+        console.log("the length of string ", str1, " is ", len);
+
+
+        // 2 slice
+        let str2 = "javascript";
+        let str3 = str2.slice(2, 7);
+        console.log(`the sliced string is ${str3}`);
+        console.log(str2[9]);
+        console.log(str2.slice(-10, -6));
+
+        // 3 substring
+        let str4 = "helloJavascript";
+        let str5 = str4.substring(0, 5);
+        console.log(`the string is ${str5}`);
+        console.log(`the string is ${str4.substring(-13, -8)}`);
+
+        // 4 substr
+        let str6 = "Hello world";
+        let str7 = str6.substr(7, 2);   //(start, length we need)
+        console.log(`the string is ${str7}`);
+        console.log(`the string is ${str6.substr(-11, 5)}`);
+
+        // 5 replace
+        let str8 = "Java script";
+        let str9 = str8.replace("Java", "Python");
+        console.log(`the string replaced is ${str9}`);
+
+        // 6 touppercase
+        let str10 = "helloworld";
+        let str11 = str10.toUpperCase();
+        console.log(`the string is ${str11}`);
+
+        // 7 tolowercase
+        let str12 = "HELLOWORLD";
+        let str13 = str12.toLowerCase();
+        console.log(`the string is ${str13}`);
+
+        // trim
+        let str14 = "         javascript   ";
+        let str15 = str14.trim();
+        console.log(`the string is ${str15}`);
+
+        let str16 = str14.trimEnd();
+        console.log(`the string is ${str16}`);
+
+        let str17 = str14.trimStart();
+        console.log(`the string is ${str17}`);
+
+
+        // 8 indexof
+        let str18 = "hello";
+        let index = str18.indexOf('ll');
+        console.log(`the string is ${index}`);
+
+        // 9 startswith
+        let str19 = "Hello ";
+        let res = str19.startsWith('h');
+        console.log(`the string is ${res}`);
+
+        // 10 endswith
+        let res2 = str19.endsWith('h');
+        console.log(`the string is ${res2}`);
+
+        // 12 includes
+        let str20 = "javascript ";
+        let res3 = str20.includes('lava');
+        console.log(`the string is ${res3}`);
+
+        // 13 concat
+        let str21 = str20.concat(str19.concat(" world"));
+        console.log(`the string is ${str21}`);
+
+
+    </script>
+</body>
+
+</html>
