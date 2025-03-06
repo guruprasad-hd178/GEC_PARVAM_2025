@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function</title>
+    <style>
+        table,
+        tr,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Arrow functions</h1>
+
+
+
+    <table>
+        <thead>
+            <tr>
+                <th>FirstName</th>
+                <th>Age</th>
+                <th>Address</th>
+            </tr>
+        </thead>
+        <tbody id="table-body">
+
+        </tbody>
+    </table>
+
+
+
+
+    <script>
+        const iseven = num => num % 2 == 0;
+
+        const res = iseven(4);
+        console.log(res);
+    </script>
+
+    <script>
+        const users = [
+            { firstname: "param", age: 23, address: "bengaluru" },
+            { firstname: "param", age: 23, address: "bengaluru" },
+            { firstname: "param", age: 23, address: "bengaluru" },
+            { firstname: "param", age: 23, address: "bengaluru" },
+        ]
+        let content = "";
+        for (let item of users) {
+            content +=
+                `<tr>
+                <td>${item.firstname}</td>
+                <td>${item.age}</td>
+                <td>${item.address}</td>
+            </tr>`
+        }
+        console.log(content);
+        document.getElementById("table-body").innerHTML = content;
+
+        
+    </script>
+</body>
+
+</html>

@@ -35,6 +35,109 @@
 
     <script>
         let users = [
+            { firstName: "darshan", age: 23, address: "Hassan" },
+            { firstName: "arjun", age: 18, address: "delhi" },
+            { firstName: "akash", age: 232, address: "mumbai" },
+            { firstName: "nandan", age: 39, address: "bengaluru" },
+            { firstName: "chandan", age: 13, address: "mysuru" },
+            { firstName: "aman", age: 44, address: "mangaluru" },
+            { firstName: "suman", age: 33, address: "kodagu" }
+        ];
+
+        let table = document.querySelector("table");
+
+        // Using for loop
+        for (let i = 0; i < users.length; i++) {
+            let row = `<tr><td>${users[i].firstName}</td><td>${users[i].age}</td><td>${users[i].address}</td></tr>`;
+            table.innerHTML += row;
+        }
+
+        // Using while loop
+        let j = 0;
+        while (j < users.length) {
+            let row = `<tr><td>${users[j].firstName}</td><td>${users[j].age}</td><td>${users[j].address}</td></tr>`;
+            table.innerHTML += row;
+            j++;
+        }
+
+        // Using do while loop
+        let k = 0;
+        do {
+            let row = `<tr><td>${users[k].firstName}</td><td>${users[k].age}</td><td>${users[k].address}</td></tr>`;
+            table.innerHTML += row;
+            k++;
+        } while (k < users.length);
+
+        // Using for of loop
+        for (let user of users) {
+            let row = `<tr><td>${user.firstName}</td><td>${user.age}</td><td>${user.address}</td></tr>`;
+            table.innerHTML += row;
+        }
+
+        // Using for in loop
+        for (let index in users) {
+            let row = `<tr><td>${users[index].firstName}</td><td>${users[index].age}</td><td>${users[index].address}</td></tr>`;
+            table.innerHTML += row;
+        }
+    </script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Table</title>
+    <style>
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            margin: 20px;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <th>First Name</th>
+            <th>Age</th>
+            <th>Address</th>
+        </tr>
+    </table>
+
+    <script>
+        let users = [
             {
                 firstName: "darshan",
                 age: 23,
@@ -87,4 +190,4 @@
     </script>
 </body>
 
-</html>
+</html> -->

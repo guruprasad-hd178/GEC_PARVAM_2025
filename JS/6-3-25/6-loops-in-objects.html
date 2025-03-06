@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loops in object</title>
+</head>
+
+<body>
+    <h1>lopps in object</h1>
+    <p>1 for in</p>
+    <p>2 object.keys{}</p>
+
+    <script>
+        const obj1 = {
+            firstName: "pavan",
+            age: 23,
+            address: "hassan"
+        }
+
+        // 1
+        for (let i in obj1) {
+            console.log(obj1[i]);
+            // console.log(obj1[`${i}`]);
+        }
+
+        // 2
+        const obj2 = {
+            firstName: "david",
+            age: 45,
+            address: "mysuru"
+        }
+        const res = Object.keys(obj2);
+        console.log("result is ", res);
+
+        for (let i of res) {
+            console.log(obj2[i]);
+        }
+    </script>
+</body>
+
+</html>
