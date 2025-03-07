@@ -12,7 +12,8 @@
             margin: 20px;
         }
 
-        th, td {
+        th,
+        td {
             border: 1px solid black;
             padding: 10px;
             text-align: center;
@@ -48,14 +49,22 @@
 
         // Using for loop
         for (let i = 0; i < users.length; i++) {
-            let row = `<tr><td>${users[i].firstName}</td><td>${users[i].age}</td><td>${users[i].address}</td></tr>`;
+            let row = `<tr>
+                <td>${users[i].firstName}</td>
+                <td>${users[i].age}</td>
+                <td>${users[i].address}</td>
+                </tr>`;
             table.innerHTML += row;
         }
 
         // Using while loop
         let j = 0;
         while (j < users.length) {
-            let row = `<tr><td>${users[j].firstName}</td><td>${users[j].age}</td><td>${users[j].address}</td></tr>`;
+            let row = `<tr>
+                <td>${users[j].firstName}</td>
+                <td>${users[j].age}</td>
+                <td>${users[j].address}</td>
+                </tr>`;
             table.innerHTML += row;
             j++;
         }
@@ -63,20 +72,32 @@
         // Using do while loop
         let k = 0;
         do {
-            let row = `<tr><td>${users[k].firstName}</td><td>${users[k].age}</td><td>${users[k].address}</td></tr>`;
+            let row = `<tr>
+                <td>${users[k].firstName}</td>
+                <td>${users[k].age}</td>
+                <td>${users[k].address}</td>
+                </tr>`;
             table.innerHTML += row;
             k++;
         } while (k < users.length);
 
         // Using for of loop
         for (let user of users) {
-            let row = `<tr><td>${user.firstName}</td><td>${user.age}</td><td>${user.address}</td></tr>`;
+            let row = `<tr>
+                <td>${user.firstName}</td>
+                <td>${user.age}</td>
+                <td>${user.address}</td>
+                </tr>`;
             table.innerHTML += row;
         }
 
         // Using for in loop
         for (let index in users) {
-            let row = `<tr><td>${users[index].firstName}</td><td>${users[index].age}</td><td>${users[index].address}</td></tr>`;
+            let row = `<tr>
+                <td>${users[index].firstName}</td>
+                <td>${users[index].age}</td>
+                <td>${users[index].address}</td>
+                </tr>`;
             table.innerHTML += row;
         }
     </script>

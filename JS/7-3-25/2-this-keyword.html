@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>this</title>
+</head>
+
+<body>
+
+    <h1>this keyword</h1>
+    <p>this keyword will open to current object</p>
+
+    <script>
+        // console.log(this);
+
+        // function hello() {
+        //     console.log(this);
+        // }
+        // hello();
+
+        // const fun1 = () => {
+        //     console.log(this);
+        // }
+        // fun1();
+
+        const obj1 = {
+            firstName: "mohan",
+            lastName: "shridar",  
+            age: 21,
+            about: function () {
+                console.log("the age of "+ this.firstName + " " + this.lastName + " is " +this.age );
+            }
+        }
+        obj1.about();
+
+        // const obj2 = () => {
+        //     firstName: "mohan",
+        //     lastName: "shridar",  
+        //     age: 21,
+        //     about: function () {
+        //         console.log("the age of "+ this.firstName + " " + this.lastName + " is " +this.age );
+        //     }
+        // }
+    </script>
+</body>
+
+</html>
