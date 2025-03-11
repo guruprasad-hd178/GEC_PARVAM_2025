@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+</head>
+
+<body>
+    <h1>Promise in js</h1>
+    <p>promise is a future value where it can be resolved to rejected </p>
+    <pre>
+
+    </pre>
+
+
+    <script>
+        const items = ["vegetables", "salt", "rice", "chips"];
+
+        const result = new Promise((resolve, reject) => {
+            if (items.includes("vegitables") && items.includes("salt") && items.includes("rice")) {
+                resolve("fried rice");
+            }
+            else {
+                reject("cannot make fried rice")
+            }
+        })
+
+        // 1 then and catch
+        console.log(result);
+
+        result.then((value) => {
+            console.log(value);
+        }).catch(error => console.log(error));
+
+        // 2 using await
+        const fried_rice = async () => {
+            try {
+                const res = await result;
+                console.log(res);
+            } catch (error) {
+                console.log(error);
+            }
+        }
+        fried_rice();
+    </script>
+</body>
+
+</html>
