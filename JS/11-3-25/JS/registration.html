@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Registration Form</title>
+    <link rel="stylesheet" href="../bootstrap.min.css">
+</head>
+
+<body>
+
+    <div class="container shadow-lg p-3 my-5 rounded-3">
+        <div class="row justify-content-center">
+            <form id="registrationForm">
+                <h1 class="text-center">REGISTRATION FORM</h1>
+
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                    <span id="nameError" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                    <span id="emailError" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" id="password" class="form-control">
+                    <div id="passwordHelpBlock" class="form-text">
+                        Your password must be 8-20 characters long, contain letters and numbers, and must not contain
+                        spaces,
+                        special characters, or emoji.
+                    </div>
+                    <span id="passwordError" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label for="cpassword" class="form-label">Confirm Password</label>
+                    <input type="password" id="cpassword" class="form-control">
+                    <span id="cpasswordError" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label for="address" class="form-label">Address</label>
+                    <textarea class="form-control" id="address" rows="3"></textarea>
+                    <span id="addressError" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label for="pincode" class="form-label">Pincode</label>
+                    <input type="number" class="form-control" id="pincode" placeholder="573201">
+                    <span id="pincodeError" class="text-danger"></span>
+                </div>
+
+                <div class="col-12">
+                    <button class="btn btn-primary" type="submit">Submit form</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="../bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const registrationForm = document.querySelector("#registrationForm");
+
+            registrationForm.addEventListener("submit", (e) => {
+                e.preventDefault();
+
+                const showError = (eleId, text) => {
+                    document.getElementById(eleId).textContent = text;
+                };
+
+                const clearError = (eleId) => {
+                    document.getElementById(eleId).textContent = "";
+                };
+
+                const formValid = () => {
+                    let isValid = true;
+
+                    const name = document.querySelector("#name").value.trim();
+                    const email = document.querySelector("#email").value.trim();
+                    const password = document.querySelector("#password").value.trim();
+                    const cpassword = document.querySelector("#cpassword").value.trim();
+                    const address = document.querySelector("#address").value.trim();
+                    const pincode = document.querySelector("#pincode").value.trim();
+
+                    // Validate Name
+                    if (name === "") {
+                        showError("nameError", "Name field is required");
+                        isValid = false;
+                    } else if (name.length < 3) {
+                        showError("nameError", "Name must contain at least 3 characters");
+                        isValid = false;
+                    } else {
+                        clearError("nameError");
+                    }
+
+                    // Validate Email
+                    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+                    if (email === "") {
+                        showError("emailError", "Email field is required");
+                        isValid = false;
+                    } else if (!emailPattern.test(email)) {
+                        showError("emailError", "Invalid email format");
+                        isValid = false;
+                    } else {
+                        clearError("emailError");
+                        isValid = true;
+                    }
+
+                    // Validate Password
+                    const passwordPattern = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,20}$/;
+                    if (password === "") {
+                        showError("passwordError", "Password is required");
+                        isValid = false;
+                    } else if (!passwordPattern.test(password)) {
+                        showError("passwordError", "Password must be 8-20 characters long and contain letters and numbers");
+                        isValid = false;
+                    } else {
+                        clearError("passwordError");
+                    }
+
+                    // Validate Confirm Password
+                    if (cpassword === "") {
+                        showError("cpasswordError", "Confirm password is required");
+                        isValid = false;
+                    } else if (cpassword !== password) {
+                        showError("cpasswordError", "Passwords do not match");
+                        isValid = false;
+                    } else {
+                        clearError("cpasswordError");
+                        isValid = true;
+                    }
+
+                    // Validate Address
+                    if (address === "") {
+                        showError("addressError", "Address is required");
+                        isValid = false;
+                    } else {
+                        clearError("addressError");
+                    }
+
+                    // Validate Pincode
+                    pincodePattern = /^\d{6}$/;
+                    if (pincode === "") {
+                        showError("pincodeError", "Pincode is required");
+                        isValid = false;
+                    } else if (!pincodePattern.test(pincode)) {
+                        showError("pincodeError", "Pincode must be exactly 6 digits");
+                        isValid = false;
+                    } else {
+                        clearError("pincodeError");
+                    }
+                }
+                // If valid, submit the form
+                if (formValid()) {
+                    alert("Form submitted successfully!");
+                    registrationForm.submit();
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
