@@ -1,0 +1,16 @@
+python --version
+
+python -m venv crud_venv
+
+crud_venv\scripts\activate
+
+pip freeze
+
+pip install Django
+
+django-admin startproject gec_crud
+
+cd gec_crud
+
+python manage.py startapp std_crud
+
