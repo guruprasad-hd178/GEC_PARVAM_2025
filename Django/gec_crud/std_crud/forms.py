@@ -8,5 +8,5 @@ class StudentForm(forms.ModelForm):
         widgets = {
             "name" : forms.TextInput(attrs = {"class" : "form-control", "placeholder": "Enter your name"}),
             'email' : forms.EmailInput(attrs = {"class" : "form-control", "placeholder": "Enter your email"}),
-            'password' : forms.PasswordInput(attrs = {"class" : "form-control", "placeholder": "Enter your password"}),
+            'password' : forms.TextInput(attrs = {"class" : "form-control", "placeholder": "Enter your password"}),
         }
