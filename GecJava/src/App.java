@@ -10,6 +10,7 @@ public class App {
 
         System.out.println("ID : " + std1.stdID );
         System.out.println("Name : " + std1.stdName );
+        
 
         System.out.println("ID : " + std2.stdID );
         System.out.println("Name : " + std2.stdName );
