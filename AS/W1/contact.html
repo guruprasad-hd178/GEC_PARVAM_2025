@@ -2,23 +2,101 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contact Us</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* Contact Form Styling */
+        .contact-form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 600px;
+            width: 100%;
+        }
 
+        .contact-form h3 {
+            font-size: 30px;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            padding: 15px;
+            border: 1px solid #f1f1f1;
+            background-color: #f1f1f1;
+            font-size: 16px;
+            margin: 10px 10px;
+        }
+
+        .contact-form input {
+            width: 40%;
+        }
+
+        .contact-form textarea {
+            width: 90%;
+            height: 120px;
+            resize: none;
+        }
+
+        .contact-form button {
+            width: 30%;
+            background: #021eac;
+            color: white;
+            border: none;
+            padding: 10px 30px;
+            font-size: 18px;
+            border-radius: 0px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .contact-form button:hover {
+            background: #0056b3;
+        }
+
+
+
+
+
+        .map-container {
+            width: 100%;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 500px;
+            border-radius: 10px;
+            border: none;
+        }
+
+        @media screen and (max-width: 768px) {
+            .contact-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .contact-info,
+            .map-container {
+                width: 90%;
+            }
+        }
+    </style>
 </head>
 
 <body>
+
     <header class="header">
         <div class="headdiv">
-            <p>Have any questions +789 5432 874</p>
-            <p class="p1"><a href="./login" style="color: aliceblue;">LogIn</a> <a href="./login"
-                    style="color: aliceblue;"> Register</a></p>
+            <p>Have any questions? Call: +789 5432 874</p>
+            <p class="p1">
+                <a href="./login" style="color: aliceblue;">LogIn</a>
+                <a href="./login" style="color: aliceblue;">Register</a>
+            </p>
         </div>
-
 
         <div class="hd">
             <h1 class="h1"><i class="fa-solid fa-book-open"></i> Study</h1>
@@ -31,20 +109,58 @@
         </div>
     </header>
 
+    <div class="dp1" style="background: rgb(6,6,90);
+background: radial-gradient(circle, rgba(6,6,90,1) 48%, rgba(21,2,143,1) 65%); color: white; padding: 20px; text-align: center;">
+        <h2 class="h22" style="font-size: 40px">CONTACT US</h2>
+        <p>Home > Contact</p>
+    </div>
+
+    <div class="foo" style="display: flex; justify-content: center; gap: 40px; padding: 50px;">
+        <div class="fdiv1" style="width: 40%;">
+            <p class="fpc"><b style="font-size: 30px;">CONTACT US</b></p><br>
+            <p class="fpcr"><i class="fa-solid fa-phone"></i> +88 018 785 4589</p>
+            <p class="fpcr"><i class="fa-solid fa-envelope"></i> deviltnes@email.com</p>
+            <p class="fpcr"><i class="fa-solid fa-earth-americas"></i> www.devintes.com</p>
+            <p class="fpcr"><i class="fa-solid fa-location-dot"></i> Washington, D.C.</p><br>
+
+            <p class="fpc"><b style="font-size: 30px;">SOCIAL MEDIA</b></p>
+            <h2>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-google"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-linkedin"></i>
+            </h2>
+        </div>
+
+        <div class="contact-form">
+            <h3>SEND YOUR MESSAGE</h3>
+            <form action="#" method="post">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">SUBMIT</button>
+            </form>
+        </div>
+    </div>
+    <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.406034781559!2d76.11921397490639!3d13.009795587309076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba5485b583251b7%3A0x513d895c8cc75816!2sGovernment%20Engineering%20College%2C%20Hassan!5e0!3m2!1sen!2sin!4v1742040294244!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
 
 
 
     <footer>
-        <div class="foo">
+        <div class="foo" style="display: flex; justify-content: space-between; padding: 30px;">
             <div class="fdiv1">
                 <p class="fp1"><i class="fa-solid fa-book-open"></i> Study</p>
-                <p class="fp2">Lorem ipsum dolor sit amet consectetur, adipisicing e?</p>
+                <p class="fp2">Lorem ipsum dolor sit amet consectetur, adipisicing elit?</p>
                 <h3>
                     <i class="fa-brands fa-facebook"></i>
-                    <i class="fa-solid fa-wifi"></i>
+                    <i class="fa-brands fa-twitter"></i>
                     <i class="fa-brands fa-google"></i>
-                    <i class="fa-brands fa-x-twitter"></i>
-                    <i class="fa-brands fa-square-instagram"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-linkedin"></i>
                 </h3>
             </div>
             <div class="fdiv2">
@@ -52,15 +168,16 @@
                 <p class="fpcr"><i class="fa-solid fa-phone"></i> +88 018 785 4589</p>
                 <p class="fpcr"><i class="fa-solid fa-envelope"></i> deviltnes@email.com</p>
                 <p class="fpcr"><i class="fa-solid fa-earth-americas"></i> www.devintes.com</p>
-                <p class="fpcr"><i class="fa-solid fa-location-dot"></i> washington D C</p>
+                <p class="fpcr"><i class="fa-solid fa-location-dot"></i> Washington, D.C.</p>
             </div>
         </div>
         <hr>
-        <div class="fdiv3">
-            <p>&copy; 2025 Made by GURUPRASAD H D </p>
+        <div class="fdiv3" style="text-align: center; padding: 10px;">
+            <p>&copy; 2025 Made by GURUPRASAD H D</p>
             <p>Privacy Policy, Terms & Conditions</p>
         </div>
     </footer>
+
 </body>
 
 </html>
