@@ -6,7 +6,7 @@ public class VarKeyword {
 		var a1 = "Hello";
 
 		for (var i = 0; i < args.length; i++) {
-
+			System.out.println(a+ "" +a1);
 		}
 	}
 }
