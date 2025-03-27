@@ -25,6 +25,8 @@ public class GenericsInJava {
 		arr1.add("Hello");
 		int value = (int)arr1.get(0);
 		System.out.println(value);
+		System.out.println(arr1);
+
 		
 //		generics
 		List<Integer> list = new ArrayList<>();

@@ -13,7 +13,6 @@ public class ArrayListDemo {
 		 * array list will allow random access
 		 * array list will allow null value
 		 * array list will preserve the order of insertion
-		 * array list will preserve the order of insertion
 		 * 
 		 */
 		

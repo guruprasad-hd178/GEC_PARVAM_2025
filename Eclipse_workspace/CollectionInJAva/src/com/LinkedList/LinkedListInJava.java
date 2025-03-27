@@ -8,8 +8,8 @@ public class LinkedListInJava {
 		/*
 		 * linked list
 		 * ============
-		 * linked list enderline data structure is doubly linked list
-		 * linked allows duplicate
+		 * linked list underline data structure is doubly linked list
+		 * linked list allows duplicate
 		 * linked list allow random access
 		 * linked list will never allow null value
 		 * linked list will preserve the order of insertion
