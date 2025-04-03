@@ -102,3 +102,5 @@ list.add(12);
 list.add(10);
 
 list.stream().filter (x -> x%2 == 0).count();
+
+

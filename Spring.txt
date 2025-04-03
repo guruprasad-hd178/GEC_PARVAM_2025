@@ -1,0 +1,209 @@
+Spring framework
+Spring boot
+IOC Container
+Dependency Injection
+
+
+Spring Framework:
+=================
+* It is java framework  that is used to develop  a web applications, Rest-API, Enterprice level applications.
+* MVC - we have to do lot of configurations in spring.
+
+* Spring framework is developed using concept of module.
+* Spring is used XML Configuration / annotation(java) configuuration
+
+Generally:
+==========
+1. security
+2. database
+3. mvc / mvt
+
+3 problems:
+===========
+1. we have to do lot of configuartions.
+2. we have to deploy the application in tomcat server.
+3. to test the application in test module we have to do lot of configuration.
+
+Spring Boot:
+============
+* It is build on the top of Spring framework, so we can achive RAD(Rapid application developement).
+
+IOC Container:
+==============
+* in normal java using new keyword we are creating an object.
+* handled to sring "Bean".
+* Inversion of control -> no need to create an object as programmer the spring we take care creation of obbject.
+* we have to give some of the information of the class.
+* it will create, configure and manage the spring bean/objects.
+
+
+Dependency Injection:
+=====================
+* injecting the one object to another object.
+example: has-a relationship
+========
+class Student{
+	private int id;
+	private String name;
+	privte Address address;
+}
+
+class Address{
+	private String city;
+	private String state;
+}
+
+3.ways to achive dependency injection:
+======================================
+1. constructor injection - best(recomended)
+2. stter injection
+3. field injection
+
+
+
+
+
+
+
+
+What is Spring Framework:
+=========================
+Spring is a popular Java framework used to build web applications, APIs, and enterprise-level applications
+
+What is Spring Boot?:
+=====================
+Spring Boot is an extension of Spring that makes it easier to build applications with minimal configuration.
+
+Why Use Spring Boot?:
+=====================
+* No need to configure a web server (Tomcat runs automatically).
+* Comes with built-in dependencies (e.g., databases, security).
+* Uses annotations to remove XML configuration.
+
+
+IOC Container and Dependency Injection:
+=======================================
+What is IOC Container?
+======================
+* IoC (Inversion of Control)
+* 💡 Think of IoC as "Spring take control of object creation."
+* The IOC Container is responsible to instantiate, configure and assemble(assemble dependencies between) the objects.
+* In normal Java programming, you create objects manually using new, like this:
+class Car {
+    Engine engine = new Engine(); // Manually creating the dependency
+}
+* With IoC, instead of creating objects manually, Spring handles it for you.
+
+* There are two types of IOC Containers they are:
+=================================================
+1. BeanFactory - light weight (used in mobile application)
+2. ApplicationContext - advanced used in enterprise-level application.
+
+
+Dependency Injection:
+=====================
+* Dependency Injection is a design pattern that removes the dependency from the programming code so that it can be easy to manage application.
+* Dependency Injection makes our programming code loosely coupled.
+
+example:
+========
+public class Student{
+	private int id;
+	private String name;
+	private int age;
+	private Address address;
+}
+
+public class Address{
+	private String address;
+	private String city;
+	private String state;
+	private String country;
+}
+
+Types of Dependency Injection:
+==============================
+3 Types:
+========
+1. Setter Injection
+2. Constructor Injection
+3. Field Injection
+
+Example:
+========
+Repository Layer:
+=================
+package com.example.demo.repository;
+
+import org.springframework.stereotype.Repository;
+
+@Repository
+public class UserRepository {
+    public String getUser() {
+        return "John Doe";
+    }
+}
+
+Service Layeer:
+===============
+package com.example.demo.service;
+
+import com.example.demo.repository.UserRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class UserService {
+    private final UserRepository userRepository;
+    // 1. Constructor Injection (Recommended)
+    @Autowired
+    public UserService(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
+    // 2. Setter Injection
+    /*
+    private UserRepository userRepository;
+    
+    @Autowired
+    public void setUserRepository(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
+    */
+
+    // 3. Field Injection (Not recommended)
+    /*
+    @Autowired
+    private UserRepository userRepository;
+    */
+
+    public String getUser() {
+        return userRepository.getUser();
+    }
+}
+
+Controller Layer:
+=================
+package com.example.demo.controller;
+
+import com.example.demo.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/user")
+public class UserController {
+
+    private final UserService userService;
+
+    @Autowired  // Constructor Injection
+    public UserController(UserService userService) {
+        this.userService = userService;
+    }
+
+    @GetMapping
+    public String getUser() {
+        return userService.getUser();
+    }
+}
