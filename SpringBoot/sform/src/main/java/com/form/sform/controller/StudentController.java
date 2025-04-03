@@ -45,4 +45,10 @@ public class StudentController {
 		studentService.saveStudent(studentDTO);
 		return "redirect:/";
 	}
+	
+	@GetMapping("/student-list")
+    public String getStudents(Model model) {
+        model.addAttribute("students", studentService.getAllStudents());
+        return "student_list";
+    }
 }

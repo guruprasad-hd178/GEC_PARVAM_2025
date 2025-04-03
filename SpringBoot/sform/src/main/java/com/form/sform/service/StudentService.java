@@ -1,5 +1,8 @@
 package com.form.sform.service;
 
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.form.sform.dto.StudentDTO;
@@ -27,6 +30,12 @@ public class StudentService {
 		students.setPassword(studentDTO.getPassword());
 		studentRepository.save(students);
 	}
+	
+	@Autowired
+	public List<Students> getAllStudents() {
+        return studentRepository.findAll();
+    }
+
 
 	
 

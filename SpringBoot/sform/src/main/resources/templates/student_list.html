@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymleaf.org">
+<head>
+    <title>Student List</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>STUDENT LIST</h1>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Email</th>
+            <th>Password</th>
+        </tr>
+        <tr th:each="student : ${students}">
+            <td th:text="${student.name}"></td>
+            <td th:text="${student.age}"></td>
+            <td th:text="${student.email}"></td>
+            <td th:text="${student.password}"></td>
+        </tr>
+    </table>
+</body>
+</html>
