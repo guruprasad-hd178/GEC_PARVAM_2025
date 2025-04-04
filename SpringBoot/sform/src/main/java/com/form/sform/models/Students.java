@@ -17,6 +17,18 @@ public class Students {
 	private String email;
 	private String password;
 	
+	private String imagePath;
+	
+	public Students(long id, String name, int age, String email, String password, String imagePath) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.age = age;
+		this.email = email;
+		this.password = password;
+		this.imagePath = imagePath;
+	}
+
 	public Students() {
 		super();
 	}
@@ -68,6 +80,14 @@ public class Students {
 
 	public void setPassword(String password) {
 		this.password = password;
+	}
+
+	public String getImagePath() {
+		return imagePath;
+	}
+
+	public void setImagePath(String imagePath) {
+		this.imagePath = imagePath;
 	}
 	
 	
