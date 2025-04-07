@@ -8,7 +8,7 @@
 </head>
 <body>
 	<h1>ADD STUDENT</h1>
-	<form th:action="@{/add-student}" method="post" th:object="${studentDTO}">
+	<form th:action="@{/add-student}" enctype="multipart/form-data" method="post" th:object="${studentDTO}">
 	
 		<label>Name</label>
 		<input type="text" name="name" placeholder="Enter your name" th:field="*{name}"> <br>
@@ -27,6 +27,10 @@
 		<label>Password</label>
 		<input type="password" name="password" placeholder="Enter password" th:field="*{password}"> <br>
 		<p th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></p><br>
+		
+		<label>Image</label>
+		<input type="file" id="file" th:field="*{image}"> <br>
+		<p th:if="${#fields.hasErrors('image')}" th:errors="*{image}"></p><br>
 		
 		
 		<input type="submit" value=" Add ">	
