@@ -45,6 +45,11 @@ public class StudentController {
 	
 	@PostMapping({"/add-student"})
 	public String addStudent(@Valid @ModelAttribute StudentDTO studentDTO, BindingResult result, Model model, RedirectAttributes attributes) {
+		Students student =  studentRepository.findByEmail(studentDTO.getEmail());
+		if (student != null) {
+			result.addError(new FieldError("studentDTO", "email", "Email already exists"));
+		}
+			
 		if (studentDTO.getImage().isEmpty()) {
 			result.addError(new FieldError("studentDTO", "image", "Image is required"));
 
@@ -76,13 +81,25 @@ public class StudentController {
 	public String editStudent(@RequestParam long id, Model model) {
 		StudentDTO studentDTO = new StudentDTO();
 		Students student = studentRepository.findById(id).get();
+		
+		studentDTO.setName(student.getName());
+	    studentDTO.setAge(student.getAge());
+	    studentDTO.setEmail(student.getEmail());
+	    studentDTO.setPassword(student.getPassword());
+	    
 		model.addAttribute("studentDTO", studentDTO);
 		model.addAttribute("student", student);
+		System.out.println("StudentDTO: " + studentDTO);
 		return "std_edit";
 	}
 	
 	@PostMapping({"/std-edit"})
 	public String updateStudent(@Valid @ModelAttribute StudentDTO studentDTO,BindingResult result, @RequestParam Long id, Model model, RedirectAttributes attributes) {
+		Students students =  studentRepository.findByEmail(studentDTO.getEmail());
+		if (students != null && students.getId() != id) {
+			result.addError(new FieldError("studentDTO", "email", "Email already exists"));
+		}
+		
 		if (result.hasErrors()) {
 			Students student = studentRepository.findById(id).get();
 			model.addAttribute("student", student);

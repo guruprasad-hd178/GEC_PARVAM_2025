@@ -2,7 +2,7 @@
 <html xmlns:th="http://thymleaf.org">
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Edit Student</title>
 </head>
 <body>
 	<h1>EDIT STUDENT</h1>
@@ -31,11 +31,14 @@
 		<input type="file" id="image" th:field="*{image}"> <br>
 		<p th:if="${#fields.hasErrors('image')}" th:errors="*{image}"></p><br>
 		
-		
+		<p th:text="'Loaded Name: ' + ${studentDTO.name}"></p>
+
 		<input type="submit" value=" Edit Student ">	
+	
 	
 	</form>
 	
 	
 </body>
 </html>
+

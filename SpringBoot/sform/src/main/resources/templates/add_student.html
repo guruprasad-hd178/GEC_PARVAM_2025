@@ -31,7 +31,8 @@
 		<label>Image</label>
 		<input type="file" id="file" th:field="*{image}"> <br>
 		<p th:if="${#fields.hasErrors('image')}" th:errors="*{image}"></p><br>
-		
+
+			
 		
 		<input type="submit" value=" Add ">	
 	</form>
