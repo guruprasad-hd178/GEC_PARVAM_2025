@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Profile Form</title>
+    <style>
+        .profile-card {
+            width: 150px;
+            padding: 20px;
+            border-radius: 10px;
+            color: white;
+            margin: 10px;
+            text-align: center;
+            display: inline-block;
+            box-shadow: 0 0 10px gray;
+        }
+        .delete-btn {
+            cursor: pointer;
+            color: red;
+        }
+        img.profile-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+<h1>Profile Form</h1>
+
+<form action="/add" method="post" th:object="${profileDTO}">
+    Name: <input type="text" th:field="*{name}" required><br><br>
+    Gender:
+    <input type="radio" th:field="*{gender}" value="Male" checked> Male
+    <input type="radio" th:field="*{gender}" value="Female"> Female<br><br>
+    Favorite Color: <input type="color" th:field="*{color}"><br><br>
+    Font Size: <input type="range" th:field="*{fontSize}" min="10" max="36"><br><br>
+    <button type="submit">Submit</button>
+</form>
+
+<hr>
+
+<div th:each="p : ${profiles}" th:style="'background-color:' + ${p.color}" th:attr="style='font-size:' + ${p.fontSize + 'px'}" class="profile-card">
+    <img class="profile-icon"
+         th:src="@{'/images/' + (${p.gender.equals('Male')} ? 'male.png' : 'female.png')}" alt="profile"><br>
+    <strong th:text="${p.name}"></strong><br>
+    <form th:action="@{'/delete/' + ${p.id}}" method="post">
+        <button class="delete-btn" type="submit">🗑</button>
+    </form>
+</div>
+
+</body>
+</html>

@@ -30,7 +30,7 @@
 <body>
 <div class="container bg-secondary-subtle">
     <form th:action="@{/edit-employee(id=${employee.id})}" method="post" th:object="${employeeDTO}" class="shadow p-5 mb-5 bg-body-tertiary rounded">
-    <h1 class="text-center">EDIT STUDENT</h1>
+    <h1 class="text-center">EDIT EMPLOYEE</h1>
         <label class="form-label">First Name</label>
         <input type="text" placeholder="enter your First name" th:field="*{fName}" class="form-control"><br>
         <label class="form-label">Last Name</label>
