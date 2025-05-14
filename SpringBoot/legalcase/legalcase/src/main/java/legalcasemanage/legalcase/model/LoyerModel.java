@@ -1,4 +1,4 @@
-package com.SpringSecurityDemo.SpringSecurityDemo.models;
+package legalcasemanage.legalcase.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -7,28 +7,27 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "students" )
-public class Student {
-
+@Table(name = "Lowyer")
+public class LoyerModel {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long id;
-	private String name;
+	private String fname;
+	private String lname;
 	private String email;
-	private String password;
 	private String role;
+	private String status;
 	
-	public long getId() {
-		return id;
+	public String getFname() {
+		return fname;
 	}
-	public void setId(long id) {
-		this.id = id;
+	public void setFname(String fname) {
+		this.fname = fname;
 	}
-	public String getName() {
-		return name;
+	public String getLname() {
+		return lname;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public void setLname(String lname) {
+		this.lname = lname;
 	}
 	public String getEmail() {
 		return email;
@@ -36,18 +35,19 @@ public class Student {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public String getPassword() {
-		return password;
-	}
-	public void setPassword(String password) {
-		this.password = password;
-	}
 	public String getRole() {
 		return role;
 	}
 	public void setRole(String role) {
 		this.role = role;
 	}
+	public String getStatus() {
+		return status;
+	}
+	public void setStatus(String status) {
+		this.status = status;
+	}
 	
 	
+
 }
