@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>My Cases | LawBridge</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to right, #434343, #000000);
+            color: white;
+            margin: 0;
+            display: flex;
+        }
+
+        .sidebar {
+            width: 240px;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 30px 20px;
+            height: 100vh;
+            backdrop-filter: blur(8px);
+        }
+
+        .sidebar a {
+            display: block;
+            color: white;
+            margin: 20px 0;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .main {
+            flex: 1;
+            padding: 40px;
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            overflow: hidden;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 12px 16px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        th {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        tr:hover {
+            background: rgba(255, 255, 255, 0.07);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sidebar">
+        <h2><i class="fa-solid fa-scale-balanced"></i> LawBridge</h2>
+        <a th:href="@{/client/dashboard}"><i class="fa-solid fa-house"></i> Dashboard</a>
+        <a th:href="@{/client/cases}"><i class="fa-solid fa-briefcase"></i> My Cases</a>
+        <a th:href="@{/client/messages}"><i class="fa-solid fa-envelope"></i> Messages</a>
+        <a th:href="@{/logout}"><i class="fa-solid fa-sign-out-alt"></i> Logout</a>
+    </div>
+
+    <div class="main">
+        <h1>My Legal Cases</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Case Title</th>
+                    <th>Lawyer</th>
+                    <th>Status</th>
+                    <th>Next Hearing</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="case : ${cases}">
+                    <td th:text="${case.title}">Case XYZ</td>
+                    <td th:text="${case.lawyerName}">Adv. Sharma</td>
+                    <td th:text="${case.status}">Active</td>
+                    <td th:text="${case.nextHearing}">2025-06-10</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

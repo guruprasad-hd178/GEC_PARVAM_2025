@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="~{layout :: layout(~{::title}, ~{::section})}">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lawyer-Client Management System</title>
+
+
+</head>
+
+<body>
+    <section>
+        <!-- Navbar -->
+
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container mt-5 p-5 mx-5">
+                <h1>Contact Us</h1>
+                <p class="lead">We’re here to help you with your legal management needs</p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section">
+            <div class="container">
+                <div class="row">
+                    <!-- Contact Form -->
+                    <div class="col-md-6 mb-4">
+                        <h3>Send Us a Message</h3>
+                        <form>
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Your Name</label>
+                                <input type="text" class="form-control" id="name" placeholder="Enter your name"
+                                    required />
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email Address</label>
+                                <input type="email" class="form-control" id="email" placeholder="Enter your email"
+                                    required />
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Your Message</label>
+                                <textarea class="form-control" id="message" rows="5"
+                                    placeholder="Enter your message here" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </form>
+                    </div>
+
+                    <!-- Contact Details -->
+                    <div class="col-md-6">
+                        <h3>Contact Information</h3>
+                        <p><strong>Address:</strong> 123 Legal Street, LawCity, LA 45678</p>
+                        <p><strong>Email:</strong> support@lawyerclientsys.com</p>
+                        <p><strong>Phone:</strong> +91-9876543210</p>
+                        <p><strong>Working Hours:</strong> Monday – Friday, 9AM – 6PM</p>
+                        <h5 class="mt-4">Our Location</h5>
+                        <iframe class="map-container"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387190.2798890148!2d-74.25987568723325!3d40.697670063235315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQyJzE4LjAiTiA3NMKwMTUnMjAuMCJX!5e0!3m2!1sen!2sin!4v1633076147686!5m2!1sen!2sin"
+                            allowfullscreen="" loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+    </section>
+
+</body>
+
+</html>

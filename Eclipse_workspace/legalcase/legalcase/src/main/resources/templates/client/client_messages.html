@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Messages | LawBridge</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to right, #1e3c72, #2a5298);
+            color: white;
+            display: flex;
+            margin: 0;
+        }
+
+        .sidebar {
+            width: 240px;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 30px 20px;
+            height: 100vh;
+            backdrop-filter: blur(8px);
+        }
+
+        .sidebar a {
+            display: block;
+            color: white;
+            margin: 20px 0;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .main {
+            flex: 1;
+            padding: 40px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        .message-box {
+            background: rgba(255, 255, 255, 0.08);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .message-box h3 {
+            margin: 0 0 10px 0;
+        }
+
+        .message-box p {
+            margin: 5px 0;
+        }
+
+        .message-box span {
+            color: #ccc;
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sidebar">
+        <h2><i class="fa-solid fa-scale-balanced"></i> LawBridge</h2>
+        <a th:href="@{/client/dashboard}"><i class="fa-solid fa-house"></i> Dashboard</a>
+        <a th:href="@{/client/cases}"><i class="fa-solid fa-briefcase"></i> My Cases</a>
+        <a th:href="@{/client/messages}"><i class="fa-solid fa-envelope"></i> Messages</a>
+        <a th:href="@{/logout}"><i class="fa-solid fa-sign-out-alt"></i> Logout</a>
+    </div>
+
+    <div class="main">
+        <h1>Your Messages</h1>
+        <div th:each="msg : ${messages}" class="message-box">
+            <h3 th:text="${msg.subject}">Meeting Update</h3>
+            <p th:text="${msg.body}">Please review the new hearing date...</p>
+            <span th:text="'From: ' + ${msg.sender} + ' | ' + ${msg.date}">From: Adv. Sharma | 2025-05-10</span>
+        </div>
+    </div>
+</body>
+
+</html>
