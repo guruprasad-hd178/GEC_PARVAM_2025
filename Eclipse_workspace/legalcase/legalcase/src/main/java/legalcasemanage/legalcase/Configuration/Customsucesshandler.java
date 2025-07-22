@@ -18,9 +18,9 @@ public class Customsucesshandler implements AuthenticationSuccessHandler {
 		//collection<? extens Granted Authority> authentication = authentication.
 				var authorities = authentication.getAuthorities();
 				
-				if(authorities.stream().anyMatch(a -> a.getAuthority().equals("LAWYER"))) {
+				if(authorities.stream().anyMatch(a -> a.getAuthority().equals("ROLE_LAWYER"))) {
 					response.sendRedirect("/lawyer_dashboard");
-				}else if(authorities.stream().anyMatch(a -> a.getAuthority().equals("CLIENT"))){
+				}else if(authorities.stream().anyMatch(a -> a.getAuthority().equals("ROLE_CLIENT"))){
 					response.sendRedirect("/client_dashboard");
 				}
 				else if(authorities.stream().anyMatch(a -> a.getAuthority().equals("ROLE_ADMIN"))){
