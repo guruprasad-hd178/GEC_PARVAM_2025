@@ -12,25 +12,22 @@ import org.springframework.security.web.SecurityFilterChain;
 import legalcasemanage.legalcase.repository.LowyerRepository;
 import legalcasemanage.legalcase.service.Customuserdatailservice;
 
-
-
 @Configuration
 public class LegalConfiguration {
 	private LowyerRepository repo;
 	private Customsucesshandler customsuccessHandler;
-	
-	
 	
 	public LegalConfiguration(LowyerRepository repo, Customsucesshandler customsuccessHandler) {
 		super();
 		this.repo = repo;
 		this.customsuccessHandler = customsuccessHandler;
 	}
+
 	@Bean
 	public PasswordEncoder passwordencoder() {
 		return new BCryptPasswordEncoder();	
+	}
 
-}
 	@Bean
 	public UserDetailsService userdetailsservice() {
 		return new Customuserdatailservice(repo);
@@ -42,12 +39,13 @@ public class LegalConfiguration {
 		provider.setPasswordEncoder(passwordencoder());
 		provider.setUserDetailsService(userdetailsservice());
 		return provider;
-		
-	}@Bean
+	}
+	
+	@Bean
 	public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception{
 		return http
 				.authorizeHttpRequests(auth -> auth
-//						.requestMatchers("/user").hasRole("USER")
+//						.requestMatchers("/user").hasRole("USER") // This line is commented out, but good to note
 						.requestMatchers("/lawyer_dashboard").hasAnyRole("LAWYER","ADMIN")
 						.requestMatchers("/client_dashboard").hasAnyRole("CLIENT","ADMIN")
 						.requestMatchers("/admin").hasRole("ADMIN")
@@ -58,7 +56,9 @@ public class LegalConfiguration {
 				.formLogin(login -> login
 						.loginPage("/login")
 						.loginProcessingUrl("/login")
-						//.defaultSuccessUrl("/admin",true)
+						.usernameParameter("email") // <--- ADD THIS LINE
+						.passwordParameter("password") // This is good to be explicit, even if it's the default
+						//.defaultSuccessUrl("/admin",true) // Your customSuccessHandler overrides this
 						.successHandler(customsuccessHandler)
 						.permitAll())
 				
@@ -66,8 +66,5 @@ public class LegalConfiguration {
 						.logoutSuccessUrl("/login?logout")
 						.permitAll())
 				.build();
-				}
-	
-	
-	
+	}	
 }
