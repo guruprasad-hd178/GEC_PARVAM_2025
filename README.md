@@ -39,4 +39,3 @@ _Feb 2025 – June 2025_
 
 ---
 
-Feel free to customize or expand it as needed!
