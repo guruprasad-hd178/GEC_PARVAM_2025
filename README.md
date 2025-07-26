@@ -1,4 +1,5 @@
 # GEC_PARVAM_2025
+
 # Internship at ParvaM Software Solutions
 
 This repository contains the work I completed during my internship at **ParvaM Software Solutions** as part of my role as a **Trainee Engineer**.
@@ -38,4 +39,3 @@ _Feb 2025 – June 2025_
 
 ---
 
-Feel free to customize or expand it as needed!
