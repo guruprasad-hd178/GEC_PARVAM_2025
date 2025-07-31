@@ -4,5 +4,5 @@
 /**
  * 
  */
-module arrayInJava {
+module ScenarioAsses {
 }
