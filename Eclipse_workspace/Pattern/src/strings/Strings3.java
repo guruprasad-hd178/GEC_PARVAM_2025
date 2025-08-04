@@ -70,10 +70,12 @@ public class Strings3 {
 		System.out.println(str2.trim());
 		
 		System.out.println("==========================");
-		System.out.println(str1.intern() == str2.intern());
+		System.out.println(str1 == str2);
+		System.out.println(str1 == str2.intern());
 
 		String str5 = "guru";
 		String[] str6 = str5.split("u");
+		System.out.println(str6);
 		System.out.println(Arrays.toString(str6));
 	}
 
