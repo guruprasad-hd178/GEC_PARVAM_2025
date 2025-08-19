@@ -1,0 +1,89 @@
+1. Variables and Scope
+Question: A local variable and an instance variable share the same name within a method. Which variable is accessed when the name is used inside that method? How do you access the other?
+
+Answer: The local variable 🏡 takes precedence and shadows the instance variable. When you use the variable name inside the method, you are always referring to the local one.
+
+To access the shadowed instance variable, you must use the this keyword, for example, this.variableName.
+
+2. Operators and Type Promotion
+Question: Consider the following expression: byte a = 10; byte b = 20; byte c = a + b;. Will this code compile? If not, why?
+
+Answer: No, this code will not compile. ❌
+
+When a and b are added, Java's binary numeric promotion rules automatically promote them to ints before the addition. The result of the addition is therefore an int. You cannot assign an int back to a byte without an explicit cast, as this could lead to a loss of data. To fix it, you would need to write: byte c = (byte)(a + b);.
+
+3. Operator Precedence and Side Effects
+Question: What is the primary theoretical difference between the logical AND operator (
+
+$$&&$$
+) and the bitwise AND operator (
+
+$$&$$
+) when used with boolean values?
+
+Answer: The key difference is short-circuiting.
+
+The logical AND operator (
+
+$$&&$$
+) is a short-circuit operator. If its first operand evaluates to false, it knows the overall result will be false and doesn't bother evaluating the second operand. This is crucial for preventing errors, such as checking if a reference is non-null before accessing its methods (if (obj != null && obj.myMethod())).
+
+The bitwise AND operator (
+
+$$&$$
+), on the other hand, always evaluates both of its operands 💡, regardless of the value of the first. This can be less efficient and may lead to a NullPointerException if the second operand is an object method call and the object is null.
+
+4. Method Overloading vs. Overriding
+Question: Explain the difference between method overloading and method overriding. Which one is a compile-time (static) polymorphism, and which is a runtime (dynamic) polymorphism?
+
+Answer:
+
+Method Overloading allows a single class to have multiple methods with the same name, as long as their parameter lists are different. The correct method to call is determined by the compiler based on the arguments' types and number. This is a form of static (compile-time) polymorphism.
+
+Method Overriding allows a subclass to provide a specific implementation for a method that is already defined in its superclass. The correct method to call is determined at runtime based on the actual object type. This is a form of dynamic (runtime) polymorphism.
+
+5. Initialization of Variables
+Question: What is the fundamental difference in initialization between instance variables and local variables?
+
+Answer:
+
+Instance variables (fields of a class) are automatically initialized to a default value 📊 by the Java Virtual Machine if they are not explicitly initialized by the programmer. For example, int variables default to 0, and object references default to null.
+
+Local variables (declared inside a method) are not initialized ⚠️ by default. The Java compiler enforces a "definite assignment" rule, meaning you must explicitly assign a value to a local variable before it is used. Attempting to use an uninitialized local variable will result in a compile-time error.
+
+6. The final Keyword
+Question: What is the theoretical meaning of the final keyword when applied to a variable? Can a final variable be modified after its first assignment?
+
+Answer: When applied to a variable, the final keyword makes it a constant. 🔒 Its value can be assigned only once. Once a value has been set, you cannot change it. Any subsequent attempt to reassign a final variable will result in a compile-time error. This principle is known as immutability and is key for thread safety and creating robust code.
+
+7. Compound Assignment Operators
+Question: Is the following statement true or false? "The compound assignment operator += is always equivalent to a standard assignment with a cast, for example, x += y is the same as x = (type of x) (x + y)."
+
+Answer: This statement is True. ✅
+
+A compound assignment operator implicitly performs a cast. For example, in byte x = 10; x += 5;, the expression x + 5 first becomes an int due to type promotion. The += operator then implicitly casts the result back to a byte before assigning it, which is the same as writing x = (byte)(x + 5);. This implicit cast can prevent a compilation error.
+
+8. Pass-by-Value vs. Pass-by-Reference
+Question: Does Java pass arguments by value or by reference? Explain how this applies to both primitive types and objects.
+
+Answer: Java is strictly pass-by-value for both primitive and object types. 📜
+
+For primitive types, a copy of the value itself is passed. Changes to the parameter inside the function do not affect the original variable.
+
+For objects, a copy of the reference (the memory address) to the object is passed. This means the parameter inside the function points to the same object in memory as the original variable. While you cannot reassign the parameter to a new object and have that change reflected in the original variable, you can use the passed reference to modify the state of the original object.
+
+9. Return Values
+Question: A method is declared with a void return type. What does this theoretically mean? Can such a method contain a return statement?
+
+Answer: A void return type means the method does not return a value to the caller. 🚫
+
+However, a void method can contain a return statement with no value (e.g., return;). This is used to exit the method early and return control to the caller before reaching the end of the method's code block.
+
+10. static Variables
+Question: What is a static variable, and how does it fundamentally differ from a regular instance variable in terms of memory and ownership?
+
+Answer: A static variable (also known as a class variable) is a variable that belongs to the class itself, not to any specific instance of the class. 🏫
+
+Memory: There is only one copy of a static variable in memory, no matter how many objects of the class are created. This single copy is shared by all instances.
+
+Ownership: A regular instance variable belongs to a specific object, so each object has its own separate copy of the variable.
