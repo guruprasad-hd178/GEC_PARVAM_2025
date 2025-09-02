@@ -1,0 +1,23 @@
+HR Login:-
+
+New Features
+Showing employees department and designation wise
+Functional client meeting
+Adding sub office location for check-in
+Holidays should mark complete automatically 
+
+Defects:
+⦁ Dashboards should function
+⦁ Leave requests is not working
+Attendence sheet not working
+client meeting not working
+
+
+Employee:-
+
+New Features
+Deleting the leave by employees
+Adding projects
+
+Defects
+Employees should not access the company and theme settings 
