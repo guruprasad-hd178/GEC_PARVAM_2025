@@ -1,36 +1,31 @@
 package com.springbootdependency;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
 public class Employee {
-	private String name;
 
-	private Address addressOne;
+    private final String name;
+    private final Address addressOne;
 
-	public Employee() {
-		System.out.println("Employee object created");
-	}
+    // ✅ Constructor Injection
+    public Employee(@Qualifier("address2") Address addressOne) {
+        this.name = "Default Employee"; 
+        this.addressOne = addressOne;
+        System.out.println("Employee object created with Address dependency");
+    }
 
-	public String getName() {
-		return name;
-	}
+    public String getName() {
+        return name;
+    }
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    public Address getAddressOne() {
+        return addressOne;
+    }
 
-	public Address getAddressOne() {
-		return addressOne;
-	}
-	
-	@Autowired
-	@Qualifier("address2")
-	public void setAddressOne(Address addressOne) {
-		this.addressOne = addressOne;
-	}
-	
-	
+    @Override
+    public String toString() {
+        return "Employee{name='" + name + "', address=" + addressOne.getName() + "}";
+    }
 }
