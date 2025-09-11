@@ -8,11 +8,11 @@
 		<version>3.5.5</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.springbootdatajpa</groupId>
-	<artifactId>SpringBootDataJPA1</artifactId>
+	<groupId>com.example</groupId>
+	<artifactId>SpringBootDataJPA3</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>SpringBootDataJPA1</name>
-	<description>@value annotation</description>
+	<name>SpringBootDataJPA3</name>
+	<description>Demo project for Spring Boot</description>
 	<url/>
 	<licenses>
 		<license/>

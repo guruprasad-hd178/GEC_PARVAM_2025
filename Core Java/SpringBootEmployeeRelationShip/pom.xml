@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.springbootdatajpa</groupId>
-	<artifactId>SpringBootDataJPA1</artifactId>
+	<artifactId>SpringBootEmployeeRelationShip</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>SpringBootDataJPA1</name>
+	<name>SpringBootEmployeeRelationShip</name>
 	<description>@value annotation</description>
 	<url/>
 	<licenses>
