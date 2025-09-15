@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4" th:fragment="header">
+        <div class="container-fluid">
+            <h1 class="fs-5"><a class="navbar-brand" th:href="@{/}">USER APP</a></h1>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <div class="navbar-nav ms-auto">
+                    <a class="nav-link btn btn-outline-light me-2" th:href="@{/}">Home</a>
+                    <a class="nav-link btn btn-outline-light me-2" th:href="@{/add-user}">Add User</a>
+                    <a class="nav-link btn btn-outline-light me-2" th:href="@{/about}">About</a>
+                    <a class="nav-link btn btn-outline-light" th:href="@{/contact}">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</body>
+</html>
