@@ -12,14 +12,14 @@
     <section th:fragment="section">
         <h1>List of Users</h1>
         <a class="btn btn-primary mb-3" th:href="@{/add-user}">Add User</a>
+        <a class="btn btn-primary mb-3" th:href="@{/students}">Students</a>
+        
         <table class="table table-bordered">
             <thead>
                 <tr>
                     <th>SI NO</th>
                     <th>Name</th>
                     <th>Email</th>
-                    <th>Password</th>
-                    <th>Actions</th>
                 </tr>
             </thead>
             <tbody>
@@ -27,11 +27,7 @@
                     <td th:text="${iterStat.count}"></td>
                     <td th:text="${user.name}"></td>
                     <td th:text="${user.email}"></td>
-                    <td th:text="${user.password}"></td>
-                    <td>
-                        <a class="btn btn-warning btn-sm" th:href="@{/edit-user/{id}(id=${user.id})}">Edit</a>
-                        <a class="btn btn-danger btn-sm" th:href="@{/delete-user/{id}(id=${user.id})}">Delete</a>
-                    </td>
+                    
                 </tr>
             </tbody>
         </table>

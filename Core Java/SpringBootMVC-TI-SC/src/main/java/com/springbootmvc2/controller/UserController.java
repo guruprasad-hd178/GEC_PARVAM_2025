@@ -32,6 +32,12 @@ public class UserController {
         return "home";
     }
 
+    @GetMapping("/login")
+    public String login() 
+    {
+        return "login"; // This should be the name of your Thymeleaf template: login.html
+    }
+    
     @GetMapping("/add-user")
     public String addUser(Model model) {
         UserDTO dto = new UserDTO();

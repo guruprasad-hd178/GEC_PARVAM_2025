@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" 
+      th:replace="~{layout :: layout(~{::title}, ~{::section})}">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student List</title>
+</head>
+
+<body>
+    <section th:fragment="section">
+        <h1>List of Students</h1>
+        <form th:action="@{/logout}" method="post">
+		    <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+		    <button type="submit" class="btn btn-link">Logout</button>
+		</form>
+        
+        <a class="btn btn-primary mb-3" th:href="@{/add-student}">Add Student</a>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>SI NO</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="student, iterStat : ${students}">
+                    <td th:text="${iterStat.count}"></td>
+                    <td th:text="${student.name}"></td>
+                    <td th:text="${student.email}"></td>
+                    <td>
+                        <a class="btn btn-warning btn-sm" th:href="@{/edit-student/{id}(id=${student.id})}">Edit</a>
+                        <a class="btn btn-danger btn-sm" th:href="@{/delete-student/{id}(id=${student.id})}">Delete</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</body>
+
+</html>

@@ -8,17 +8,18 @@ import org.springframework.stereotype.Component;
 
 import com.springbootmvc2.model.User;
 import com.springbootmvc2.repository.UserRepository;
-import com.springbootsecurity1.service.CustomUserDetail;
+import com.springbootmvc2.service.CustomUserDetail;
 
 @Component
 public class CustomUserDetailService implements UserDetailsService{
 
 	@Autowired
 	private UserRepository repository;
-	
+
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-		User user2 = repository.findByEmail(username).orElseThrow(()-> new UsernameNotFoundException("User name not found: "+username));
-		return new CustomUserDetail(user2);
+		User user = repository.findByEmail(username).orElseThrow(()-> new UsernameNotFoundException("User name not found: "+username));
+		return new CustomUserDetail(user);
 	}
+	
 }

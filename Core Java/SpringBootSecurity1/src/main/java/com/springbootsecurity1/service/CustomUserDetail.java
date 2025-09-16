@@ -13,10 +13,12 @@ import com.springbootsecurity1.model.User;
 public class CustomUserDetail implements UserDetails {
 	
 	private User user;
+	
 	@Autowired
 	public CustomUserDetail(User user2) {
 		this.user = user2;
 	}
+	
 
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
